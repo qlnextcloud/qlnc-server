@@ -1,0 +1,28 @@
+OC.L10N.register(
+    "groupfolders",
+    {
+    "Wrong index!" : "Indice errato!",
+    "Wrong length!" : "Lunghezza errata!",
+    "Wrong offset!" : "Scostamento errato!",
+    "Delete" : "Elimina",
+    "Folder name" : "Nome della cartella",
+    "Groups" : "Gruppi",
+    "Quota" : "Quota",
+    "Create" : "Crea",
+    "Add group" : "Aggiungi gruppo",
+    "{size} used" : "{size} utilizzati",
+    "Other..." : "Altro...",
+    "a" : "a",
+    "big" : "grande",
+    "blink" : "lampeggia",
+    "b" : "b",
+    "tt" : "tt",
+    "font" : "carattere",
+    "i" : "i",
+    "small" : "piccolo",
+    "strike" : "sottolineato",
+    "sub" : "pedice",
+    "sup" : "apice",
+    "Group folders" : "Raggruppa cartelle"
+},
+"nplurals=2; plural=(n != 1);");
