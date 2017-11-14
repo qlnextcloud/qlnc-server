@@ -1,3 +1,6 @@
 [submodule "3rdparty"]
 	path = 3rdparty
 	url = https://github.com/qlnextcloud/3rdparty
+[submodule "apps/files_antivirus"]
+	path = apps/files_antivirus
+	url = https://github.com/qlnextcloud/files_antivirus
