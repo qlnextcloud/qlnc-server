@@ -43,6 +43,6 @@
     "provisioning_api",
     "oauth2",
     "twofactor_backupcodes",
-    "workflowengine"
+    "firstrunwizard"
   ]
 }
