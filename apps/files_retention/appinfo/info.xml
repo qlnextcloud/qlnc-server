@@ -18,7 +18,7 @@
 		<nextcloud min-version="12" max-version="12" />
 	</dependencies>
 	<screenshot>https://raw.githubusercontent.com/nextcloud/files_retention/master/screenshots/1.png</screenshot>
-
+    <default_enable/>
 	<settings>
 		<admin>OCA\Files_Retention\Settings\Admin</admin>
 	</settings>
