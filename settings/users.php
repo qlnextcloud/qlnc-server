@@ -132,8 +132,8 @@ $tmpl->assign('defaultQuotaIsUserDefined', $defaultQuotaIsUserDefined);
 $tmpl->assign('recoveryAdminEnabled', $recoveryAdminEnabled);
 
 $tmpl->assign('show_storage_location', $config->getAppValue('core', 'umgmt_show_storage_location', 'false'));
-$tmpl->assign('show_last_login', $config->getAppValue('core', 'umgmt_show_last_login', 'false'));
-$tmpl->assign('show_email', $config->getAppValue('core', 'umgmt_show_email', 'false'));
+$tmpl->assign('show_last_login', $config->getAppValue('core', 'umgmt_show_last_login', 'true'));
+$tmpl->assign('show_email', $config->getAppValue('core', 'umgmt_show_email', 'true'));
 $tmpl->assign('show_backend', $config->getAppValue('core', 'umgmt_show_backend', 'false'));
 $tmpl->assign('send_email', $config->getAppValue('core', 'umgmt_send_email', 'false'));
 
