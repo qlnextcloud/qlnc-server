@@ -122,7 +122,7 @@ class JSConfigHelper {
 			$defaultExpireDate = (int) $this->config->getAppValue('core', 'shareapi_expire_after_n_days', '7');
 			$enforceDefaultExpireDate = $this->config->getAppValue('core', 'shareapi_enforce_expire_date', 'no') === 'yes';
 		}
-		$outgoingServer2serverShareEnabled = $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'yes') === 'yes';
+		$outgoingServer2serverShareEnabled = $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'no') === 'yes';
 
 		$countOfDataLocation = 0;
 		$dataLocation = str_replace(\OC::$SERVERROOT .'/', '', $this->config->getSystemValue('datadirectory', ''), $countOfDataLocation);

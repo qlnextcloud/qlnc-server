@@ -182,8 +182,8 @@ class CheckSetupController extends Controller {
 			return '';
 		}
 		if(!$this->config->getSystemValue('appstoreenabled', true)
-			&& $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'yes') === 'no'
-			&& $this->config->getAppValue('files_sharing', 'incoming_server2server_share_enabled', 'yes') === 'no') {
+			&& $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'no') === 'no'
+			&& $this->config->getAppValue('files_sharing', 'incoming_server2server_share_enabled', 'no') === 'no') {
 			return '';
 		}
 

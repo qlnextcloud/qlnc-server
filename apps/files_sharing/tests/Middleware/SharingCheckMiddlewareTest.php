@@ -163,7 +163,7 @@ class SharingCheckMiddlewareTest extends \Test\TestCase {
 							],
 							[
 								['files_sharing', 'incoming_server2server_share_enabled', 'yes', $confIn ? 'yes' : 'no'],
-								['files_sharing', 'outgoing_server2server_share_enabled', 'yes', $confOut ? 'yes' : 'no'],
+								['files_sharing', 'outgoing_server2server_share_enabled', 'yes', $confOut ? 'no' : 'no'],
 							],
 							$res
 						];

@@ -950,7 +950,7 @@ class FederatedShareProvider implements IShareProvider {
 		if ($this->gsConfig->onlyInternalFederation()) {
 			return false;
 		}
-		$result = $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'yes');
+		$result = $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'no');
 		return ($result === 'yes');
 	}
 
@@ -963,7 +963,7 @@ class FederatedShareProvider implements IShareProvider {
 		if ($this->gsConfig->onlyInternalFederation()) {
 			return false;
 		}
-		$result = $this->config->getAppValue('files_sharing', 'incoming_server2server_share_enabled', 'yes');
+		$result = $this->config->getAppValue('files_sharing', 'incoming_server2server_share_enabled', 'no');
 		return ($result === 'yes');
 	}
 
@@ -992,7 +992,7 @@ class FederatedShareProvider implements IShareProvider {
 		if ($this->gsConfig->isGlobalScaleEnabled()) {
 			return false;
 		}
-		$result = $this->config->getAppValue('files_sharing', 'lookupServerUploadEnabled', 'yes');
+		$result = $this->config->getAppValue('files_sharing', 'lookupServerUploadEnabled', 'no');
 		return ($result === 'yes');
 	}
 
