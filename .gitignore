@@ -2,7 +2,7 @@
 /data
 /owncloud
 /config/config.php
-/config/*.config.php
+!/config/*.config.php
 /config/mimetype*.json
 /config/mount.php
 /apps/inc.php
