@@ -129,7 +129,7 @@ class Server implements ISettings {
 			'suggestedOverwriteCliUrl'         => $suggestedOverwriteCliUrl,
 
 			// Background jobs
-			'backgroundjobs_mode' => $this->config->getAppValue('core', 'backgroundjobs_mode', 'ajax'),
+			'backgroundjobs_mode' => $this->config->getAppValue('core', 'backgroundjobs_mode', 'cron'),
 			'cron_log'            => $this->config->getSystemValue('cron_log', true),
 			'lastcron'            => $this->config->getAppValue('core', 'lastcron', false),
 			'cronErrors'		  => $this->config->getAppValue('core', 'cronErrors'),

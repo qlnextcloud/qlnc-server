@@ -102,7 +102,7 @@ class OC_Template extends \OC\Template\Base {
 			//so to make sure this scripts/styles here are loaded first we use OC_Util::addScript() with $prepend=true
 			//meaning the last script/style in this list will be loaded first
 			if (\OC::$server->getSystemConfig()->getValue ('installed', false) && $renderAs !== 'error' && !\OCP\Util::needUpgrade()) {
-				if (\OC::$server->getConfig ()->getAppValue ( 'core', 'backgroundjobs_mode', 'ajax' ) == 'ajax') {
+				if (\OC::$server->getConfig ()->getAppValue ( 'core', 'backgroundjobs_mode', 'cron' ) == 'ajax') {
 					OC_Util::addScript ( 'backgroundjobs', null, true );
 				}
 			}

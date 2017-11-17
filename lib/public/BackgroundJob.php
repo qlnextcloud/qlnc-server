@@ -60,7 +60,7 @@ class BackgroundJob {
 	 * @since 5.0.0
 	 */
 	public static function getExecutionType() {
-		return \OC::$server->getConfig()->getAppValue('core', 'backgroundjobs_mode', 'ajax');
+		return \OC::$server->getConfig()->getAppValue('core', 'backgroundjobs_mode', 'cron');
 	}
 
 	/**
