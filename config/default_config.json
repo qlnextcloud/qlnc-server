@@ -5,6 +5,7 @@
 	},
     "apps":{
         "core": {
+            "backgroundjobs_mode": "cron",
             "umgmt_show_last_login": "true",
             "umgmt_show_email": "true"
         },
