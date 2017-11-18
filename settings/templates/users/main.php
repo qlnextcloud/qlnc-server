@@ -36,7 +36,7 @@ translation('settings');
 
 <div id="app-navigation">
 	<?php print_unescaped($this->inc('users/part.grouplist')); ?>
-	<div id="app-settings">
+	<div id="app-settings" class="conceal_class">
 		<div id="app-settings-header">
 			<button class="settings-button" tabindex="0" data-apps-slide-toggle="#app-settings-content"><?php p($l->t('Settings'));?></button>
 		</div>

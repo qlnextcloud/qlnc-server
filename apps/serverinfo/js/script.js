@@ -121,8 +121,9 @@
 									        labels: [t('serverinfo', 'Users'), 
 									        		t('serverinfo', 'Groups'), 
 									        		t('serverinfo', 'Links'), 
-									        		t('serverinfo', 'Federated sent'), 
-									        		t('serverinfo', 'Federated received')],
+									        		// t('serverinfo', 'Federated sent'), 
+													// t('serverinfo', 'Federated received')
+												],
 									        datasets: [{
 									        	label: " ",
 									            data: shares_data,
@@ -130,15 +131,15 @@
 									                'rgba(0, 0, 255, 0.2)',
 									                'rgba(0, 255, 0, 0.2)',
 									                'rgba(255, 0, 0, 0.2)',
-									                'rgba(0, 255, 255, 0.2)',
-									                'rgba(255, 0, 255, 0.2)'
+									                // 'rgba(0, 255, 255, 0.2)',
+									                // 'rgba(255, 0, 255, 0.2)'
 									            ],
 									            borderColor: [
 									                'rgba(0, 0, 255, 1)',
 									                'rgba(0, 255, 0, 1)',
 									                'rgba(255, 0, 0, 1)',
-									                'rgba(0, 255, 255, 1)',
-									                'rgba(255, 0, 255, 1)'
+									                // 'rgba(0, 255, 255, 1)',
+									                // 'rgba(255, 0, 255, 1)'
 									            ],
 									            borderWidth: 1
 									        }]

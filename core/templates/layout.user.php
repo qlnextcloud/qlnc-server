@@ -138,8 +138,8 @@
 					<div id="expanddiv" style="display:none;">
 					<ul>
 					<?php foreach($_['settingsnavigation'] as $entry):?>
-						<li>
-							<a href="<?php print_unescaped($entry['href']); ?>"
+						<li <?php if( $entry["id"] == "help" || $entry["id"] == "core_apps"): ?> class="conceal_class"<?php endif; ?>>
+							<a href="<?php ($entry['href'] == '/settings/admin')?(print_unescaped($entry['href'].'/serverinfo')):print_unescaped($entry['href']) ?>"
 								<?php if( $entry["active"] ): ?> class="active"<?php endif; ?>>
 								<img alt="" src="<?php print_unescaped($entry['icon'] . '?v=' . $_['versionHash']); ?>">
 								<?php p($entry['name']) ?>

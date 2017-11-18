@@ -66,6 +66,7 @@ class WizardController extends Controller  {
 		$theming = \OC::$server->getThemingDefaults();
 		return new TemplateResponse('firstrunwizard', 'wizard', [
 			'desktop'      => $this->config->getSystemValue('customclient_desktop', $theming->getSyncClientUrl()),
+			'desktop_sole'      => $this->config->getSystemValue('customclient_desktop_sole', $theming->getDownloadUrl()),
 			'android'      => $this->config->getSystemValue('customclient_android', $theming->getAndroidClientUrl()),
 			'ios'          => $this->config->getSystemValue('customclient_ios', $theming->getiOSClientUrl()),
 		], '');

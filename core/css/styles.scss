@@ -42,7 +42,9 @@ table {
 	border-spacing: 0;
 	white-space: nowrap;
 }
-
+.conceal_class {
+	display: none!important;
+}
 caption, th, td {
 	text-align: left;
 	font-weight: normal;

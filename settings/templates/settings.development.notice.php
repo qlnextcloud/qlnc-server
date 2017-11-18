@@ -16,7 +16,7 @@
 		)); ?>
 	</p>
 
-	<p class="social-button">
+	<p class="social-button conceal_class">
 		<?php print_unescaped(str_replace(
 			[
 				'{googleimage}',

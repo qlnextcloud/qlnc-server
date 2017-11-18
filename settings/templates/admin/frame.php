@@ -37,8 +37,12 @@ script('files', 'jquery.fileupload');
 				$class = 'nav-icon-' . $form['anchor'];
 				$sectionName = $form['section-name'];
 				$active = $form['active'] ? ' class="active"' : '';
+				$hidecls = '';
+				if($form['anchor'] != "additional" && $form['anchor'] != "serverinfo") {
+					$hidecls = ' conceal_class';
+				}
 		?>
-				<li <?php print_unescaped($form['active'] ? ' class="active"' : ''); ?>>
+				<li class="<?php print_unescaped($form['active'] ? 'active' .$hidecls : '' .$hidecls); ?>">
 					<a href="<?php p($anchor); ?>">
 						<?php if (!empty($form['icon'])) { ?>
 							<img alt="" src="<?php print_unescaped($form['icon']); ?>">

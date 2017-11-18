@@ -5,11 +5,13 @@
 			?>has-tooltip" title="<?php p($_['usage_relative'] . '%');
 		} ?>">
 			<a href="#" class="nav-icon-quota svg">
-				<p id="quotatext"><?php
+				<p id="quotatext">
+					<?php p($_['diskCapacity'])?>
+					<?php
 					if ($_['quota'] !== \OCP\Files\FileInfo::SPACE_UNLIMITED) {
-						p($l->t('%s of %s used', [$_['usage'], $_['total_space']]));
+						print_unescaped($l->t(' %s / %s ', [$_['usage'], $_['total_space']]));
 					} else {
-						p($l->t('%s used', [$_['usage']]));
+						p($l->t(' %s / %s ', [$_['usage'], $_['total_space']]));
 					} ?></p>
 				<div class="quota-container">
 					<div style="width:<?php p($_['usage_relative']);?>%"
@@ -21,13 +23,13 @@
 		<?php foreach ($_['navigationItems'] as $item) { ?>
 		<li data-id="<?php p($item['id']) ?>" class="nav-<?php p($item['id']) ?>">
 			<a href="<?php p(isset($item['href']) ? $item['href'] : '#') ?>"
-				class="nav-icon-<?php p($item['icon'] !== '' ? $item['icon'] : $item['id']) ?> svg">
+				class="nav-icon-<?php p($item['icon'] !== '' ? $item['icon'] : $item['id']) ?><?php if($item['id'] == 'systemtagsfilter'): ?> conceal_class<?php endif; ?> svg">
 				<?php p($item['name']);?>
 			</a>
 		</li>
 		<?php } ?>
 	</ul>
-	<div id="app-settings">
+	<div id="app-settings" class="conceal_class">
 		<div id="app-settings-header">
 			<button class="settings-button" data-apps-slide-toggle="#app-settings-content">
 				<?php p($l->t('Settings'));?>

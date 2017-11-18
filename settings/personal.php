@@ -194,6 +194,22 @@ $tmpl->assign('websiteVerification', $userData[\OC\Accounts\AccountManager::PROP
 $tmpl->assign('twitterVerification', $userData[\OC\Accounts\AccountManager::PROPERTY_TWITTER]['verified']);
 $tmpl->assign('emailVerification', $userData[\OC\Accounts\AccountManager::PROPERTY_EMAIL]['verified']);
 
+$download_url_person = 'http';
+if ($_SERVER["HTTPS"] == "on") 
+{
+	$download_url_person .= "s";
+}
+$download_url_person .= "://";
+if($_SERVER["HTTP_REFERER"] != "") {
+	$download_url_person .= $_SERVER["HTTP_REFERER"];
+}else if($_SERVER['SERVER_NAME'] != "") {
+	$download_url_person .= $_SERVER['SERVER_NAME'];
+}else {
+	$download_url_person .= $_SERVER['HTTP_HOST'];
+	// return strstr($_SERVER['HTTP_HOST'], ':'.$_server['remote_port'], TRUE);
+}
+$tmpl->assign('clientDownloadLink', $download_url_person);
+
 $needVerifyMessage = [\OC\Accounts\AccountManager::PROPERTY_EMAIL, \OC\Accounts\AccountManager::PROPERTY_WEBSITE, \OC\Accounts\AccountManager::PROPERTY_TWITTER];
 
 foreach ($needVerifyMessage as $property) {

@@ -99,6 +99,24 @@ class OC_Defaults {
 		}
 	}
 
+	public function getDownloadUrl() {
+		$download_url = 'http';
+		if ($_SERVER["HTTPS"] == "on") 
+		{
+		  $download_url .= "s";
+		}
+		$download_url .= "://";
+		if($_SERVER["HTTP_REFERER"] != "") {
+			$download_url .= $_SERVER["HTTP_REFERER"];
+		}else if($_SERVER['SERVER_NAME'] != "") {
+			$download_url .= $_SERVER['SERVER_NAME'];
+		}else {
+			$download_url .= $_SERVER['HTTP_HOST'];
+			// return strstr($_SERVER['HTTP_HOST'], ':'.$_server['remote_port'], TRUE);
+		}
+		return $download_url;
+		
+	}
 	/**
 	 * Returns the URL where the sync clients are listed
 	 * @return string URL
@@ -243,7 +261,6 @@ class OC_Defaults {
 				' rel="noreferrer">' .$this->getEntity() . '</a>'.
 				' – ' . $this->getSlogan();
 		}
-
 		return $footer;
 	}
 
@@ -255,9 +272,8 @@ class OC_Defaults {
 		if ($this->themeExist('getLongFooter')) {
 			$footer = $this->theme->getLongFooter();
 		} else {
-			$footer = $this->getShortFooter();
+			$footer = $this->getShortFooter().' – <a href="'. $this->getDownloadUrl() . '/download/client.exe" target="_self" rel="noreferrer">客户端下载</a>';
 		}
-
 		return $footer;
 	}
 

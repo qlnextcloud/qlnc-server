@@ -9,7 +9,7 @@
 ?>
 
 <div id="app-navigation">
-	<ul class="with-icon">
+	<ul class="with-icon conceal_class">
 	<?php foreach($_['forms'] as $form) {
 		if (isset($form['anchor'])) {
 			$anchor = '#' . $form['anchor'];
@@ -29,10 +29,10 @@
 		<?php if($_['usage_relative'] > 80): ?> class="quota-warning" <?php endif; ?>>
 		<p id="quotatext">
 			<?php if ($_['quota'] === \OCP\Files\FileInfo::SPACE_UNLIMITED): ?>
-				<?php print_unescaped($l->t('You are using <strong>%s</strong> of <strong>%s</strong>',
+				<?php print_unescaped($l->t('容量： <strong>%s</strong> / <strong>%s</strong>',
 					[$_['usage'], $_['total_space']]));?>
 			<?php else: ?>
-				<?php print_unescaped($l->t('You are using <strong>%s</strong> of <strong>%s</strong> (<strong>%s %%</strong>)',
+				<?php print_unescaped($l->t('容量： <strong>%s</strong> / <strong>%s</strong> (<strong>%s %%</strong>)',
 					[$_['usage'], $_['total_space'],  $_['usage_relative']]));?>
 			<?php endif ?>
 		</p>
@@ -146,7 +146,7 @@
 	</div>
 	<?php } ?>
 	<?php if (!empty($_['address']) || $_['lookupServerUploadEnabled']) { ?>
-	<div class="personal-settings-setting-box">
+	<div class="personal-settings-setting-box conceal_class">
 		<form id="addressform" class="section">
 			<h2>
 				<label for="address"><?php p($l->t('Address')); ?></label>
@@ -164,7 +164,7 @@
 	</div>
 	<?php } ?>
 	<?php if (!empty($_['website']) || $_['lookupServerUploadEnabled']) { ?>
-	<div class="personal-settings-setting-box">
+	<div class="personal-settings-setting-box conceal_class">
 		<form id="websiteform" class="section">
 			<h2>
 				<label for="website"><?php p($l->t('Website')); ?></label>
@@ -209,7 +209,7 @@
 	</div>
 	<?php } ?>
 	<?php if (!empty($_['twitter']) || $_['lookupServerUploadEnabled']) { ?>
-	<div class="personal-settings-setting-box">
+	<div class="personal-settings-setting-box conceal_class">
 		<form id="twitterform" class="section">
 			<h2>
 				<label for="twitter"><?php p($l->t('Twitter')); ?></label>
@@ -295,7 +295,7 @@ if($_['passwordChangeSupported']) {
 ?>
 
 <?php if (isset($_['activelanguage'])) { ?>
-<form id="language" class="section">
+<form id="language" class="section conceal_class">
 	<h2>
 		<label for="languageinput"><?php p($l->t('Language'));?></label>
 	</h2>
@@ -326,20 +326,20 @@ if($_['passwordChangeSupported']) {
 <?php if(OC_APP::isEnabled('firstrunwizard')) {?>
 <div id="clientsbox" class="section clientsbox">
 	<h2><?php p($l->t('Get the apps to sync your files'));?></h2>
-	<a href="<?php p($_['clients']['desktop']); ?>" rel="noreferrer" target="_blank">
+	<a href="<?php p($_['clientDownloadLink'].'/download/client.exe'); ?>" rel="noreferrer" target="_blank">
 		<img src="<?php print_unescaped(image_path('core', 'desktopapp.svg')); ?>"
 			 alt="<?php p($l->t('Desktop client'));?>" />
 	</a>
-	<a href="<?php p($_['clients']['android']); ?>" rel="noreferrer" target="_blank">
+	<a href="<?php p($_['clients']['android']); ?>" class="conceal_class" rel="noreferrer" target="_blank">
 		<img src="<?php print_unescaped(image_path('core', 'googleplay.png')); ?>"
 			 alt="<?php p($l->t('Android app'));?>" />
 	</a>
-	<a href="<?php p($_['clients']['ios']); ?>" rel="noreferrer" target="_blank">
+	<a href="<?php p($_['clients']['ios']); ?>" class="conceal_class" rel="noreferrer" target="_blank">
 		<img src="<?php print_unescaped(image_path('core', 'appstore.svg')); ?>"
 			 alt="<?php p($l->t('iOS app'));?>" />
 	</a>
 
-		<p>
+		<p class="conceal_class">
 			<?php print_unescaped(str_replace(
 				[
 					'{contributeopen}',
@@ -352,11 +352,11 @@ if($_['passwordChangeSupported']) {
 				$l->t('If you want to support the project {contributeopen}join development{linkclose} or {contributeopen}spread the word{linkclose}!'))); ?>
 		</p>
 
-		<p><a class="button" href="#" id="showWizard"><?php p($l->t('Show First Run Wizard again'));?></a></p>
+		<p class="conceal_class"><a class="button" href="#" id="showWizard"><?php p($l->t('Show First Run Wizard again'));?></a></p>
 </div>
 <?php }?>
 
-<div id="security" class="section">
+<div id="security" class="section conceal_class">
 	<h2><?php p($l->t('Security'));?></h2>
 	<p class="settings-hint hidden-when-empty"><?php p($l->t('Web, desktop, mobile clients and app specific passwords that currently have access to your account.'));?></p>
 	<table class="icon-loading">
@@ -404,8 +404,8 @@ if($_['passwordChangeSupported']) {
 
 <div class="section">
 	<h2><?php p($l->t('Version'));?></h2>
-	<p><a href="<?php print_unescaped($theme->getBaseUrl()); ?>" target="_blank"><?php p($theme->getTitle()); ?></a> <?php p(OC_Util::getHumanVersion()) ?></p>
-	<p><?php include('settings.development.notice.php'); ?></p>
+	<p><a href="javascript:;" target="_blank"><?php p($theme->getTitle()); ?></a> <?php p(OC_Util::getHumanVersion()) ?></p>
+	<p>copyright</p>
 </div>
 
 </div>

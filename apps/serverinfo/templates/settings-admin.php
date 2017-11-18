@@ -27,12 +27,12 @@ script('serverinfo', 'Chart.min');
 style('serverinfo', 'style');
 ?>
 
-<div class="section" id="cpuSection">
+<div class="section conceal_class" id="cpuSection">
 	<h2><?php p($l->t('CPU load'));?></h2>
 	<canvas id="cpuloadcanvas" width="600" height="150"></canvas>
 	<p><em id="cpuFooterInfo"></em></p>
 </div>
-<div class="section" id="memorySection">
+<div class="section conceal_class" id="memorySection">
 	<h2><?php p($l->t('Memory usage'));?></h2>
 	<canvas id="memorycanvas" width="600" height="150"></canvas>
 	<p><em id="memFooterInfo"></em></p>
@@ -52,21 +52,21 @@ style('serverinfo', 'style');
 	<p><?php p($l->t('Users:'));?> <em id="numUsersStorage"><?php p($_['storage']['num_users']);?></em></p>
 	<p><?php p($l->t('Files:'));?> <em id="numFilesStorage"><?php p($_['storage']['num_files']);?></em></p>
 </div>
-<div class="section" id="phpSection">
+<div class="section conceal_class" id="phpSection">
 	<h2><?php p($l->t('PHP'));?></h2>
 	<p><?php p($l->t('Version:'));?> <em id="phpVersion"><?php p($_['php']['version']);?></em></p>
 	<p><?php p($l->t('Memory Limit:'));?> <em id="phpMemLimit"><?php p($_['php']['memory_limit']);?></em></p>
 	<p><?php p($l->t('Max Execution Time:'));?> <em id="phpMaxExecTime"><?php p($_['php']['max_execution_time']);?></em></p>
 	<p><?php p($l->t('Upload max size:'));?> <em id="phpUploadMaxSize"><?php p($_['php']['upload_max_filesize']);?></em></p>
 </div>
-<div class="section" id="databaseSection">
+<div class="section conceal_class" id="databaseSection">
 	<h2><?php p($l->t('Database'));?></h2>
 	<p><?php p($l->t('Type:'));?> <em id="databaseType"><?php p($_['database']['type']);?></em></p>
 	<p><?php p($l->t('Version:'));?> <em id="databaseVersion"><?php p($_['database']['version']);?></em></p>
 	<p><?php p($l->t('Size:'));?> <em id="dataBaseSize"><?php p($_['database']['size']);?></em></p>
 </div>
 
-<div class="section" id="ocsEndPoint">
+<div class="section conceal_class" id="ocsEndPoint">
 	<h2><?php p($l->t('External monitoring tool'));?></h2>
 	<p>
 		<?php p($l->t('You can connect an external monitoring tool by using this end point: ') . $_['ocs']);?>
