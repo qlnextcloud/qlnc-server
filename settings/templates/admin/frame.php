@@ -38,7 +38,7 @@ script('files', 'jquery.fileupload');
 				$sectionName = $form['section-name'];
 				$active = $form['active'] ? ' class="active"' : '';
 				$hidecls = '';
-				if($form['anchor'] != "additional" && $form['anchor'] != "serverinfo") {
+				if($form['anchor'] != "additional" && $form['anchor'] != "serverinfo" && $form['anchor'] != "groupfolders") {
 					$hidecls = ' conceal_class';
 				}
 		?>
