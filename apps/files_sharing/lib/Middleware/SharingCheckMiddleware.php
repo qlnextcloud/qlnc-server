@@ -135,12 +135,12 @@ class SharingCheckMiddleware extends Middleware {
 	private function externalSharesChecks() {
 
 		if (!$this->reflector->hasAnnotation('NoIncomingFederatedSharingRequired') &&
-			$this->config->getAppValue('files_sharing', 'incoming_server2server_share_enabled', 'no') !== 'yes') {
+			$this->config->getAppValue('files_sharing', 'incoming_server2server_share_enabled', 'yes') !== 'yes') {
 			return false;
 		}
 
 		if (!$this->reflector->hasAnnotation('NoOutgoingFederatedSharingRequired') &&
-		    $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'no') !== 'yes') {
+		    $this->config->getAppValue('files_sharing', 'outgoing_server2server_share_enabled', 'yes') !== 'yes') {
 			return false;
 		}
 
