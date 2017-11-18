@@ -30,7 +30,7 @@ class SettingsManager {
 	/** @var IConfig */
 	private $config;
 
-	private $sendPasswordByMailDefault = 'yes';
+	private $sendPasswordByMailDefault = 'no';
 
 	private $enforcePasswordProtectionDefault = 'no';
 
