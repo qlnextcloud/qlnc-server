@@ -13,6 +13,9 @@
 			"outgoing_server2server_share_enabled": "no",
 			"incoming_server2server_share_enabled": "no",
 			"lookupServerUploadEnabled": "no"
+		},
+        "sharebymail": {
+			"sendpasswordmail": "no"
 		}
 	}
 }
