@@ -4,6 +4,10 @@
         "force_language": "zh_CN"
 	},
     "apps":{
+        "core": {
+            "umgmt_show_last_login": "true",
+            "umgmt_show_email": "true"
+        },
         "files_sharing": {
 			"outgoing_server2server_share_enabled": "no",
 			"incoming_server2server_share_enabled": "no",
