@@ -2,5 +2,12 @@
     "system": {
         "default_language": "zh_CN",
         "force_language": "zh_CN"
+	},
+    "apps":{
+        "files_sharing": {
+			"outgoing_server2server_share_enabled": "no",
+			"incoming_server2server_share_enabled": "no",
+			"lookupServerUploadEnabled": "no"
+		}
 	}
 }
