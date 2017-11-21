@@ -11,7 +11,6 @@
 var $userList;
 var $userListBody;
 var $emptyContainer;
-
 var UserDeleteHandler;
 var UserList = {
 	availableGroups: [],
@@ -564,7 +563,7 @@ var UserList = {
 		if (quota !== 'default' && quota !== "none" && OC.Util.computerFileSize(quota) === null) {
 			// the select component has added the bogus value, delete it again
 			$select.find('option[selected]').remove();
-			OC.Notification.showTemporary(t('core', 'Invalid quota value "{val}"', {val: quota}));
+			OC.Notification.showTemporary(t('settings', 'Invalid quota value "{val}"', {val: quota}));
 			return;
 		}
 		UserList._updateQuota(uid, quota, function(returnedQuota) {
@@ -710,9 +709,9 @@ $(document).ready(function () {
 			function (result) {
 				blurFunction();
 				if (result.status === 'success') {
-					OC.Notification.showTemporary(t('admin', 'Password successfully changed'));
+					OC.Notification.showTemporary(t('settings', 'Password successfully changed'));
 				} else {
-					OC.Notification.showTemporary(t('admin', result.data.message));
+					OC.Notification.showTemporary(t('settings', result.data.message));
 				}
 			}
 		).fail(blurFunction);
