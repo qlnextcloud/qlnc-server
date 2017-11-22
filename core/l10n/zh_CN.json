@@ -328,6 +328,7 @@
     "The object type is not specified." : "未指定对象类型.",
     "Enter new" : "输入新...",
     "Add" : "增加",
+    "Can't share with yourself" : "不能分享给自己",
     "Edit tags" : "编辑标签",
     "Error loading dialog template: {error}" : "加载对话框模板出错: {error}",
     "No tags selected for deletion." : "没有选择删除的标签",
