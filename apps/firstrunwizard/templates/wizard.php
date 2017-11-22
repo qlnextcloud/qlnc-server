@@ -28,7 +28,7 @@
 <h2><?php p($l->t('Get the apps to sync your files'));?></h2>
 <a target="_blank" href="<?php p($_['desktop_sole'].'/download/client.exe'); ?>">
 	<img src="<?php p(image_path('core', 'desktopapp.svg')); ?>"
-		alt="<?php p($l->t('Desktop client'));?>" />
+		alt="<?php p($l->t('Desktop client'));?>" style="width:170px;height:60px;"/>
 </a>
 <a target="_blank" href="<?php p($_['android']); ?>" class="conceal_class">
 	<img src="<?php p(image_path('core', 'googleplay.svg')); ?>"
