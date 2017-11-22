@@ -157,6 +157,10 @@ $(document).ready(function () {
 		if ($('#pass1').val() !== '' && $('#pass2').val() !== ''
 			&& !(isIE8or9 && $('#pass2').val() === $('#pass2').attr('placeholder'))) {
 			// Serialize the data
+			if($('#pass2').val().length < 8 || $('#pass2').val().length > 32) {
+				OC.Notification.showTemporary(t('settings', 'Password format error, length 8-32 bits'));
+				return false;
+			}
 			var post = $("#passwordform").serialize();
 			$('#passwordchanged').hide();
 			$('#passworderror').hide();

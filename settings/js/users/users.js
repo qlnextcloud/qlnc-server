@@ -703,6 +703,13 @@ $(document).ready(function () {
 			return;
 		}
 
+		if(password.length < 8 || password.length > 32) {
+			OC.Notification.showTemporary(t('settings', 'Password format error, length 8-32 bits'));
+			var updateTd = $('#userlist').find('tbody').find('tr').find('td.password').find('input[type="password"]').closest("td.password");
+			updateTd.prepend('<span>●●●●●●●</span>');
+			updateTd.find('input[type="password"]').remove();
+			return false;
+		}
 		$.post(
 			OC.generateUrl('/settings/users/changepassword'),
 			{username: uid, password: password, recoveryPassword: recoveryPasswordVal},
@@ -996,6 +1003,12 @@ $(document).ready(function () {
 		if ($.trim(password) === '' && !$('#CheckboxMailOnUserCreate').is(':checked')) {
 			OC.Notification.showTemporary(t('settings', 'Error creating user: {message}', {
 				message: t('settings', 'A valid password must be provided')
+			}));
+			return false;
+		}
+		if($.trim(password).length < 8 || $.trim(password).length > 32) {
+			OC.Notification.showTemporary(t('settings', 'Error creating user: {message}', {
+				message: t('settings', 'Password format error, length 8-32 bits')
 			}));
 			return false;
 		}
