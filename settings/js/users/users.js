@@ -1063,9 +1063,19 @@ $(document).ready(function () {
 					}, undefined, {escape: false}));
 				}).success(function(){
 					$('#newuser').get(0).reset();
-					$("#usergrouplist").find("li").removeClass("active");
-					$("#usergrouplist").find("li#everyonegroup").addClass("active");
-					GroupList.showGroup(GroupList.getElementGID($("#usergrouplist")));
+					if(groups.length > 0) {
+						var groupLi = $("#usergrouplist").find("li.isgroup") ;
+						for(var i=0;i<groupLi.length;i++) {
+							for(var j=0;j<groups.length;j++) {
+								if(groupLi.eq(i).find(".groupname").html() == groups[j]) {
+									GroupList.showGroup(GroupList.getElementGID(groupLi.eq(i)));
+								}
+							}
+							
+						}
+					}else {
+						GroupList.showGroup(GroupList.getElementGID($("#usergrouplist")));
+					}
 				});
 		});
 	};

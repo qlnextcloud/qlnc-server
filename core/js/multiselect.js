@@ -241,14 +241,16 @@
 							var li=$(this).parent();
 							var val = $(this).val();
 							var select=button.parent().next();
-							// if(typeof settings.createCallback === 'function') {
-							// 	var response = settings.createCallback(select, val);
-							// 	if(response === false) {
-							// 		return false;
-							// 	} else if(typeof response !== 'undefined') {
-							// 		val = response;
-							// 	}
-							// }
+							if($(li).parent().hasClass("down")) {
+								if(typeof settings.createCallback === 'function') {
+									var response = settings.createCallback(select, val);
+									if(response === false) {
+										return false;
+									} else if(typeof response !== 'undefined') {
+										val = response;
+									}
+								}
+							}
 							if(settings.singleSelect) {
 								$.each(select.find('option:selected'), function() {
 									$(this).removeAttr('selected');

@@ -301,6 +301,7 @@ GroupList = {
 
 			// Call function for handling delete/undo
 			GroupDeleteHandler.mark(GroupList.getElementGID(this));
+			GroupList.showGroup(GroupList.getElementGID($("#usergrouplist")));
 		};
 		$userGroupList.on('click', '.delete', deleteAction);
 
