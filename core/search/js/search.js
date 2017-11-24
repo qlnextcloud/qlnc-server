@@ -99,6 +99,7 @@
 			 * @param size
 			 */
 			this.search = function(query, inApps, page, size) {
+				query = $.trim(query);
 				if (query) {
 					OC.addStyle('core/search','results');
 					if (typeof page !== 'number') {
@@ -320,7 +321,7 @@
 						renderCurrent();
 					}
 				} else {
-					var query = $searchBox.val();
+					var query = $.trim($searchBox.val());
 					if (lastQuery !== query) {
 						currentResult = -1;
 						if (query.length > 2) {

@@ -374,7 +374,7 @@ var UserList = {
 		}
 		$userList.siblings('.loading').css('visibility', 'visible');
 		UserList.updating = true;
-		if(gid === undefined) {
+		if(gid === undefined || gid == "_everyone") {
 			gid = '';
 		}
 		UserList.currentGid = gid;
@@ -1063,6 +1063,9 @@ $(document).ready(function () {
 					}, undefined, {escape: false}));
 				}).success(function(){
 					$('#newuser').get(0).reset();
+					$("#usergrouplist").find("li").removeClass("active");
+					$("#usergrouplist").find("li#everyonegroup").addClass("active");
+					GroupList.showGroup(GroupList.getElementGID($("#usergrouplist")));
 				});
 		});
 	};
