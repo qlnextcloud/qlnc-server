@@ -235,19 +235,20 @@
 								}
 							});
 							if (exists) {
+								OC.Notification.showTemporary(t('settings', 'Group already exists.'));
 								return false;
 							}
 							var li=$(this).parent();
 							var val = $(this).val();
 							var select=button.parent().next();
-							if(typeof settings.createCallback === 'function') {
-								var response = settings.createCallback(select, val);
-								if(response === false) {
-									return false;
-								} else if(typeof response !== 'undefined') {
-									val = response;
-								}
-							}
+							// if(typeof settings.createCallback === 'function') {
+							// 	var response = settings.createCallback(select, val);
+							// 	if(response === false) {
+							// 		return false;
+							// 	} else if(typeof response !== 'undefined') {
+							// 		val = response;
+							// 	}
+							// }
 							if(settings.singleSelect) {
 								$.each(select.find('option:selected'), function() {
 									$(this).removeAttr('selected');
