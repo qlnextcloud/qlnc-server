@@ -241,7 +241,7 @@
 							var li=$(this).parent();
 							var val = $(this).val();
 							var select=button.parent().next();
-							if($(li).parent().hasClass("down")) {
+							if($(li).parents(".groups").is('div')) {
 								if(typeof settings.createCallback === 'function') {
 									var response = settings.createCallback(select, val);
 									if(response === false) {
