@@ -26,7 +26,13 @@
 <div class="firstrunwizard-content">
 
 <h2><?php p($l->t('Get the apps to sync your files'));?></h2>
-<a target="_blank" href="<?php p($_['desktop_sole'].'/download/client.exe'); ?>">
+<a <?php $client_download = $_['desktop_sole'].'/winpc/Microcloud-setup.exe';
+		 $firstDownload = file_exists('/data/microcloud_client/winpc/Microcloud-setup.exe');
+		 if ($firstDownload) {
+			 print_unescaped('href="'.$client_download.'"');
+		 }else {
+			print_unescaped('class="client_download"');		
+		 }  ?> target="_self" >
 	<img src="<?php p(image_path('core', 'desktopapp.svg')); ?>"
 		alt="<?php p($l->t('Desktop client'));?>" style="width:170px;height:60px;"/>
 </a>

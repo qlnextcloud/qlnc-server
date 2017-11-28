@@ -377,7 +377,9 @@ $(document).ready(function () {
 	$('#sendcropperbutton').click(function () {
 		sendCropData();
 	});
-
+	$('#clientsbox').find('a.client_download').click(function(){
+		OC.Notification.showTemporary(t('settings', 'Download the server is not available'));
+	})
 	$('#pass2').strengthify({
 		zxcvbn: OC.linkTo('core','vendor/zxcvbn/dist/zxcvbn.js'),
 		titles: [

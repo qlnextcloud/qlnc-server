@@ -272,7 +272,15 @@ class OC_Defaults {
 		if ($this->themeExist('getLongFooter')) {
 			$footer = $this->theme->getLongFooter();
 		} else {
-			$footer = $this->getShortFooter().' – <a href="'. $this->getDownloadUrl() . '/download/client.exe" target="_self" rel="noreferrer">客户端下载</a>';
+			$ClientDownload = $this->getDownloadUrl()."/winpc/Microcloud-setup.exe";
+			$footerDownload = file_exists('/data/microcloud_client/winpc/Microcloud-setup.exe');
+			if($footerDownload) {
+				$clentDownType = 'href="'.$ClientDownload.'"';
+			}else {
+				$clentDownType = 'class="client_download"';	
+			}
+			// $footer = $this->getShortFooter().' – <a href="'. $this->getDownloadUrl() . '/download/client.exe" target="_self" rel="noreferrer">客户端下载</a>';
+			$footer = $this->getShortFooter().' – <a '.$clentDownType.'  target="_self" rel="noreferrer">客户端下载</a>';
 		}
 		return $footer;
 	}

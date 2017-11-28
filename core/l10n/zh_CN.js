@@ -9,6 +9,7 @@ OC.L10N.register(
     "No image or file provided" : "没有提供图片或文件",
     "Unknown filetype" : "未知的文件类型",
     "Invalid image" : "无效的图像",
+    "Download the server is not available": "下载服务端不可用",
     "An error occurred. Please contact your admin." : "发生了一个错误, 请联系管理员.",
     "No temporary profile picture available, try again" : "没有临时个人页图片可用, 请重试",
     "No crop data provided" : "没有提供剪裁数据",

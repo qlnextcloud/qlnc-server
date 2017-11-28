@@ -30,6 +30,8 @@ OC.Login = _.extend(OC.Login || {}, {
 
 $(document).ready(function() {
 	$('form[name=login]').submit(OC.Login.onLogin);
-
 	$('#remember_login').click(OC.Login.rememberLogin);
+	$('footer>p.info').find('a.client_download').click(function(){
+		alert(t('core', 'Download the server is not available'));
+	})
 });

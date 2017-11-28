@@ -825,7 +825,8 @@ td.avatar {
 #notification {
 	margin: 0 auto;
 	max-width: 60%;
-	z-index: 8000;
+	// z-index: 8000;
+	z-index: 10000;
 	background-color: $color-main-background;
 	border: 0;
 	padding: 1px 8px;

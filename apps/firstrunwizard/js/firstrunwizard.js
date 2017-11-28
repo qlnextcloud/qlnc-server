@@ -16,6 +16,9 @@ function showFirstRunWizard(){
 }
 
 $(document).ready(function() {
+	$('.firstrunwizard-content').find('a.client_download').live('click',function(){
+		OC.Notification.showTemporary(t('firstrunwizard', 'Download the server is not available'));
+	});
 	$('#showWizard').live('click', function () {
 		showFirstRunWizard();
 	});

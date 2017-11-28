@@ -17,6 +17,7 @@ OC.L10N.register(
     "Disabled apps" : "禁用应用",
     "App bundles" : "应用软件包",
     "Wrong password" : "密码错误",
+    "Download the server is not available": "下载服务端不可用",
     "Saved" : "已保存",
     "Can't share with yourself" : "不能分享给自己",
     "No user supplied" : "没有满足的用户",
