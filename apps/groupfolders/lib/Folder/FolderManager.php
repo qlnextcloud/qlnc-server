@@ -107,7 +107,7 @@ class FolderManager {
 		$query = $this->connection->getQueryBuilder();
 		$query->select($query->createFunction('COUNT(*)'))->from('group_folders')->where($query->expr()->eq('mount_point', $query->createNamedParameter($mountPoint, IQueryBuilder::PARAM_STR)));
 		$result = $query->execute()->fetchColumn();
-		if ($result[0] > 0 ) {
+		if ($result > 0 ) {
 			//echo "createFolder: folder exists";
 			return -1;
 		}
