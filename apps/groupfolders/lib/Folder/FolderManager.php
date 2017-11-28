@@ -100,7 +100,17 @@ class FolderManager {
 	}
 
 	public function createFolder($mountPoint) {
+		if (!(gettype($mountPoint) == "string" && strlen($mountPoint) > 0)) {
+			//echo "createFolder: invalid parameter";
+			return -1;
+		}
 		$query = $this->connection->getQueryBuilder();
+		$query->select($query->createFunction('COUNT(*)'))->from('group_folders')->where($query->expr()->eq('mount_point', $query->createNamedParameter($mountPoint, IQueryBuilder::PARAM_STR)));
+		$result = $query->execute()->fetchColumn();
+		if ($result[0] > 0 ) {
+			//echo "createFolder: folder exists";
+			return -1;
+		}
 
 		$query->insert('group_folders')
 			->values([
