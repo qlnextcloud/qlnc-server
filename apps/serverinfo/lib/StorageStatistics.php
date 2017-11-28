@@ -42,6 +42,7 @@ class StorageStatistics {
 		return [
 			'num_users' => $this->countUserEntries(),
 			'num_files' => $this->countEntries('filecache'),
+			'num_all_access_files' => $this->countAllAccessibleFiles(),
 			'num_storages' => $this->countEntries('storages'),
 			'num_storages_local' => $this->countStorages('local'),
 			'num_storages_home' => $this->countStorages('home'),
@@ -101,4 +102,22 @@ class StorageStatistics {
 		return (int) $row['num_entries'];
 	}
 
+	/**
+	* desc: count all accessible files in files dir for every storage
+	* sql: select count(*) as access_files from oc_filecache, oc_storages
+			where oc_filecache.storage = oc_storages.numeric_id and path like 'files/%'
+	* @param storages => array
+	* @param type -> string
+	* @return int
+	*/
+
+	protected function countAllAccessibleFiles() {
+		$query = $this->connection->getQueryBuilder();
+		$query->select($query->createFunction('COUNT(*)'))
+			->from('filecache', 'f')
+			->innerjoin('f', 'storages', 's', 'f.storage = s.numeric_id')
+			->where($query->expr()->like('path', $query->createNamedParameter('files/%')));
+		$result = $query->execute()->fetchColumn();
+		return (int)$result;
+	}
 }
