@@ -64,7 +64,7 @@ OC.L10N.register(
     "Your password on %s was reset by an administrator." : "你的密码在 %s 已被管理员重置",
     "Password for %1$s changed on %2$s" : "%1$s的密码更改为%2$s",
     "Password changed for %s" : "密码更改为%s",
-    "If you did not request this, please contact an administrator." : "如果您发出此项请求，请联系管理员。",
+    "If you did not request this, please contact an administrator." : "如果您并未发出此项请求，请联系管理员。",
     "%1$s changed your email address on %2$s." : "%1$s把你的邮箱地址更改成%2$s",
     "Your email address on %s was changed." : "你在%s上的电子邮件地址已更改",
     "Your email address on %s was changed by an administrator." : "你在%s上的电子邮件地址已被管理员修改",
