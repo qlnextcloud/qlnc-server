@@ -50,7 +50,8 @@ style('serverinfo', 'style');
 <div class="section" id="storageSection">
 	<h2><?php p($l->t('Storage'));?></h2>
 	<p><?php p($l->t('Users:'));?> <em id="numUsersStorage"><?php p($_['storage']['num_users']);?></em></p>
-	<p><?php p($l->t('Files:'));?> <em id="numFilesStorage"><?php p($_['storage']['num_files']);?></em></p>
+	<p><?php p($l->t('All Files:'));?> <em id="numFilesStorage"><?php p($_['storage']['num_files']);?></em></p>
+	<p><?php p($l->t('Accessible files:'));?> <em id="numAccessFilesStorage"><?php p($_['storage']['num_all_access_files']);?></em></p>
 </div>
 <div class="section conceal_class" id="phpSection">
 	<h2><?php p($l->t('PHP'));?></h2>

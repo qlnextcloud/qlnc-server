@@ -22,6 +22,8 @@ OC.L10N.register(
     "Storage" : "存储",
     "Users:" : "用户:",
     "Files:" : "文件:",
+    "All Files:": "所有文件数:",
+    "Accessible files:": "可访问文件数:",
     "PHP" : "PHP",
     "Version:" : "版本:",
     "Memory Limit:" : "内存限制:",
