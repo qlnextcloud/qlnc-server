@@ -43,12 +43,16 @@ export class App extends Component {
 		this.setState({newMountPoint: ''});
 		this.api.createFolder(mountPoint).then((id) => {
 			const folders = this.state.folders;
-			folders[id] = {
-				mount_point: mountPoint,
-				groups: {},
-				quota: -3
-			};
-			this.setState({folders});
+			if (id) {
+				folders[id] = {
+					mount_point: mountPoint,
+					groups: {},
+					quota: -3
+				};
+				this.setState({folders});
+			}else {
+				OC.Notification.showTemporary(t('groupfolders', 'Folder already exists.'));
+			}
 		});
 	};
 

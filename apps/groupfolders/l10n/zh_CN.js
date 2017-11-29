@@ -21,6 +21,7 @@ OC.L10N.register(
     "strike" : "罢工",
     "sub" : "子",
     "sup" : "SUP",
+    "Folder already exists.": "文件夹已存在。",
     "Group folders" : "组文件夹"
 },
 "nplurals=1; plural=0;");
