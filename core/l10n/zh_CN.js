@@ -311,7 +311,7 @@ OC.L10N.register(
     "Some files have not passed the integrity check. Further information on how to resolve this issue can be found in our <a target=\"_blank\" rel=\"noreferrer\" href=\"{docLink}\">documentation</a>. (<a href=\"{codeIntegrityDownloadEndpoint}\">List of invalid files…</a> / <a href=\"{rescanEndpoint}\">Rescan…</a>)" : "一些文件没有通过完整性检查. 了解如何解决该问题请查看我们的<a target=\"_blank\" rel=\"noreferrer\" href=\"{docLink}\">文档</a>. (<a href=\"{codeIntegrityDownloadEndpoint}\">无效的文件列表…</a> / <a href=\"{rescanEndpoint}\">重新扫描…</a>)",
     "Your data directory and your files are probably accessible from the Internet. The .htaccess file is not working. We strongly suggest that you configure your web server in a way that the data directory is no longer accessible or you move the data directory outside the web server document root." : "您的数据目录和文件可从互联网被访问. .htaccess 文件没有工作. 我们强烈建议您在 Web 服务器上配置不可以访问数据目录, 或者将数据目录移动到 Web 服务器根目录之外.",
     "The \"Strict-Transport-Security\" HTTP header is not configured to at least \"{seconds}\" seconds. For enhanced security we recommend enabling HSTS as described in our <a href=\"{docUrl}\" rel=\"noreferrer\">security tips</a>." : "HTTP 请求头 \"Strict-Transport-Security\" 没有配置为至少 “{seconds}” 秒. 出于增强安全性考虑, 我们推荐按照<a href=\"{docUrl}\" rel=\"noreferrer\">安全提示</a>中的说明启用 HSTS.",
-    "Shared with {recipients}" : "由 {recipients} 分享",
+    "Shared with {recipients}" : "您分享给了 {recipients}",
     "Error while unsharing" : "取消共享时出错",
     "can reshare" : "允许重新分享",
     "can edit" : "允许修改",
