@@ -410,8 +410,8 @@ if($_['passwordChangeSupported']) {
 
 <div class="section">
 	<h2><?php p($l->t('Version'));?></h2>
-	<p><a href="javascript:;" target="_blank"><?php p($theme->getTitle()); ?></a> <?php p(OC_Util::getHumanVersion()) ?></p>
-	<p>copyright</p>
+	<p><?php p($theme->getTitle()); ?> <?php p(OC_Util::getHumanVersion()) ?></p>
+	<p>版权归属：深圳市启仑智能科技有限公司</p>
 </div>
 
 </div>
