@@ -9,7 +9,7 @@ More information is available in the text editor documentation.
 	<author>Tom Needham, Björn Schießle</author>
 	<version>2.4.1</version>
 	<shipped>true</shipped>
-	<default_enable/>
+	<default_disable/>
 	<ocsid>166051</ocsid>
 	<dependencies>
 		<nextcloud min-version="12" max-version="12" />
