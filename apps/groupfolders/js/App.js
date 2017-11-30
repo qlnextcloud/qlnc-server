@@ -43,7 +43,7 @@ export class App extends Component {
 		this.setState({newMountPoint: ''});
 		this.api.createFolder(mountPoint).then((id) => {
 			const folders = this.state.folders;
-			if (id) {
+			if (id != -1 && id !== undefined) {
 				folders[id] = {
 					mount_point: mountPoint,
 					groups: {},
