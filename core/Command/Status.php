@@ -43,6 +43,7 @@ class Status extends Base {
 			'version' => implode('.', \OCP\Util::getVersion()),
 			'versionstring' => \OC_Util::getVersionString(),
 			'edition' => '',
+			'fullversion' =>\OC_Util::getFullVersionString(),
 		);
 
 		$this->writeArrayInOutputFormat($input, $output, $values);

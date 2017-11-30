@@ -460,6 +460,15 @@ class OC_Util {
 	}
 
 	/**
+	 *get the current full version string of microcloud
+	 *@return string
+	 */
+	public static function getFullVersionString() {
+		OC_Util::loadVersion();
+		return self::$versionCache['OC_FullVersionString'];
+	}
+
+	/**
 	 * @deprecated the value is of no use anymore
 	 * @return string
 	 */
@@ -506,6 +515,9 @@ class OC_Util {
 
 		/** @var $OC_Channel string */
 		self::$versionCache['OC_Channel'] = $OC_Channel;
+
+		/** @var $OC_FullVersionString string */
+		self::$versionCache['OC_FullVersionString'] = $OC_FullVersionString;
 	}
 
 	/**
@@ -1406,12 +1418,12 @@ class OC_Util {
 	 * @return string
 	 */
 	public static function getHumanVersion() {
-		$version = OC_Util::getVersionString();
+		$version = OC_Util::getFullVersionString();
 		$build = OC_Util::getBuild();
 		if (!empty($build) and OC_Util::getChannel() === 'daily') {
 			$version .= ' Build:' . $build;
 		}
-		return $version;
+		return 'v' . $version;
 	}
 
 	/**

@@ -51,10 +51,10 @@ class OC_Defaults {
 	public function __construct() {
 		$this->l = \OC::$server->getL10N('lib');
 
-		$this->defaultEntity = 'Nextcloud'; /* e.g. company name, used for footers and copyright notices */
-		$this->defaultName = 'Nextcloud'; /* short name, used when referring to the software */
-		$this->defaultTitle = 'Nextcloud'; /* can be a longer name, for titles */
-		$this->defaultBaseUrl = 'https://nextcloud.com';
+		$this->defaultEntity = '企业文件管家'; /* e.g. company name, used for footers and copyright notices */
+		$this->defaultName = '企业文件管家'; /* short name, used when referring to the software */
+		$this->defaultTitle = '企业文件管家'; /* can be a longer name, for titles */
+		$this->defaultBaseUrl = 'javascript:;';
 		$this->defaultSyncClientUrl = 'https://nextcloud.com/install/#install-clients';
 		$this->defaultiOSClientUrl = 'https://itunes.apple.com/us/app/nextcloud/id1125420102?mt=8';
 		$this->defaultiTunesAppId = '1125420102';
