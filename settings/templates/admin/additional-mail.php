@@ -61,13 +61,13 @@ if ($_['mail_smtpmode'] === 'qmail') {
 
 		<p>
 			<label for="mail_smtpmode"><?php p($l->t('Send mode')); ?></label>
-			<select name="mail_smtpmode" id="mail_smtpmode" disabled="disabled" style="background-color: #f7f7f4;color: #000000;">
+			<select name="mail_smtpmode" id="mail_smtpmode" style="background-color: #f7f7f4;color: #000000;">
 				<?php foreach ($mail_smtpmode as $smtpmode):
 					$selected = '';
 					if ($smtpmode[0] == $_['mail_smtpmode']):
 						$selected = 'selected="selected"';
 					endif; ?>
-					<option value="<?php p($smtpmode[0])?>" <?php p($selected) ?>><?php p($smtpmode[1]) ?></option>
+					<option class="<?php p($smtpmode[0])?>" value="<?php p($smtpmode[0])?>" <?php p($selected) ?>><?php p($smtpmode[1]) ?></option>
 				<?php endforeach;?>
 			</select>
 

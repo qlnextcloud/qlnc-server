@@ -1300,3 +1300,6 @@ doesnotexist:-o-prefocus, .strengthify-wrapper {
 	margin-bottom: 12px;
 	opacity: .7;
 }
+#mail_smtpmode option.php {
+	display: none;
+}
