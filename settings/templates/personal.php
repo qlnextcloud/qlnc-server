@@ -326,7 +326,7 @@ if($_['passwordChangeSupported']) {
 <?php if(OC_APP::isEnabled('firstrunwizard')) {?>
 <div id="clientsbox" class="section clientsbox">
 	<h2><?php p($l->t('Get the apps to sync your files'));?></h2>
-	<a <?php $client_download = $_['clientDownloadLink'].'/winpc/Microcloud-setup.exe';
+	<a <?php $client_download = $_['clientDownloadLink'].'/microcloud_client/winpc/Microcloud-setup.exe';
 		$personDownload = file_exists('/data/microcloud_client/winpc/Microcloud-setup.exe');			
 		 if ($personDownload) {
 			 print_unescaped(' href="'.$client_download.'"');

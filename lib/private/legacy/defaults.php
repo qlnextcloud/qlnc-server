@@ -272,7 +272,7 @@ class OC_Defaults {
 		if ($this->themeExist('getLongFooter')) {
 			$footer = $this->theme->getLongFooter();
 		} else {
-			$ClientDownload = $this->getDownloadUrl()."/winpc/Microcloud-setup.exe";
+			$ClientDownload = $this->getDownloadUrl()."/microcloud_client/winpc/Microcloud-setup.exe";
 			$footerDownload = file_exists('/data/microcloud_client/winpc/Microcloud-setup.exe');
 			if($footerDownload) {
 				$clentDownType = 'href="'.$ClientDownload.'"';
