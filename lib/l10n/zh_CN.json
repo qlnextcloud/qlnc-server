@@ -180,6 +180,7 @@
     "App '%s' could not be installed!" : "应用程序 '%s' 无法被安装!",
     "App \"%s\" cannot be installed because the following dependencies are not fulfilled: %s" : "应用程序 \"%s\" 无法被安装，因为为满足下列依赖关系: %s",
     "a safe home for all your data" : "给您所有的数据一个安全的家",
+    "a more reliable and easy-using manager for enterprise files" : "更加安全易用的企业文件管家",
     "File is currently busy, please try again later" : "文件当前正忙，请稍后再试",
     "Can't read file" : "无法读取文件",
     "Application is not enabled" : "应用程序未启用",

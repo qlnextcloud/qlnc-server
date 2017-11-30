@@ -5,6 +5,7 @@ OC.L10N.register(
     "Saved" : "已保存",
     "Admin" : "管理",
     "a safe home for all your data" : "给您所有的数据一个安全的家",
+    "a more reliable and easy-using manager for enterprise files" : "更加安全易用的企业文件管家",
     "The given name is too long" : "输入的名称过长",
     "The given web address is too long" : "输入的地址过长",
     "The given slogan is too long" : "输入的标语过长",

@@ -90,9 +90,9 @@ function preview(setting, value, serverCssUrl) {
 
 function hideUndoButton(setting, value) {
 	var themingDefaults = {
-		name: 'Nextcloud',
-		slogan: t('lib', 'a safe home for all your data'),
-		url: 'https://nextcloud.com',
+		name: '企业文件管家',
+		slogan: t('lib', 'a more reliable and easy-using manager for enterprise files'),
+		url: 'javascript:;',
 		color: '#0082c9',
 		logoMime: '',
 		backgroundMime: ''
