@@ -1772,6 +1772,10 @@
 			urlSpec.x = Math.ceil(urlSpec.x);
 			urlSpec.y = Math.ceil(urlSpec.y);
 			urlSpec.forceIcon = 0;
+			var suffix = urlSpec.file.split(".");
+			if(suffix[suffix.length-1] == 'txt') {
+				return OC.generateUrl('/apps/files_texteditor/img/text.svg?') + $.param(urlSpec);
+			}
 			return OC.generateUrl('/core/preview.png?') + $.param(urlSpec);
 		},
 
