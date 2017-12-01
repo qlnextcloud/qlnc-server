@@ -166,7 +166,7 @@
     "Oct." : "十月",
     "Nov." : "十一月",
     "Dec." : "十二月",
-    "Only the following characters are allowed in a username: \"a-z\", \"A-Z\", \"0-9\", and \"_.@-'\"" : "在用户名中只允许使用以下字符：“a-z”，“A-Z”，“0-9”和\"_.@-'\"",
+    "Only the following characters are allowed in a username: \"a-z\", \"A-Z\", \"0-9\", and \"_.@-'\"" : "在用户名中只允许使用以下字符：“a-z”，“A-Z”，“0-9”和“_.@-'”",
     "A valid username must be provided" : "必须提供合法的用户名",
     "Username contains whitespace at the beginning or at the end" : "用户名在开头或结尾处包含空格",
     "Username must not consist of dots only" : "用户名不能仅由点组成",
