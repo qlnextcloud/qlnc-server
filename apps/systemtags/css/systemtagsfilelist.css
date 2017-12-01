@@ -37,3 +37,8 @@
 	opacity: .5;
 	vertical-align: middle;
 }
+#app-sidebar a.icon-close{
+	background-image: url(../../../core/css/../img/actions/close-red.svg?v=1);
+	background-size: 20px;
+	opacity: 1;
+}
