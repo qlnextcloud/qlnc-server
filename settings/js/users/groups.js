@@ -133,7 +133,10 @@ GroupList = {
 			OC.PasswordConfirmation.requirePasswordConfirmation(_.bind(this.createGroup, this, groupname));
 			return;
 		}
-
+		if(groupname.length < 1 || groupname.length > 32) {
+			OC.Notification.showTemporary(t('settings', 'Group name format error, length 1-32 characters'));
+			return false;
+		}
 		$.post(
 			OC.generateUrl('/settings/users/groups'),
 			{
