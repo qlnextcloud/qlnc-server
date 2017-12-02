@@ -1,6 +1,6 @@
 	<?php OCP\Util::addScript('files', 'admin'); ?>
 
-	<div class="section">
+	<div class="section" style="display:none;">
 		<h2><?php p($l->t('File handling')); ?></h2>
 		<label for="maxUploadSize"><?php p($l->t( 'Maximum upload size' )); ?> </label>
 		<span id="maxUploadSizeSettingsMsg" class="msg"></span>
