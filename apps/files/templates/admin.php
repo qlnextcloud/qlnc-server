@@ -18,3 +18,8 @@
 			<p><em><?php p($l->t('Missing permissions to edit from here.')); ?></em></p>
 		<?php endif; ?>
 	</div>
+	<div class="switchBox">
+		<h2><?php p($l->t('antivirus program'))?></h2>
+		<input id="antiviruSwitch" type="button" class="btn" value="<?php p($l->t('have turned')) ?>">
+		<em><?php p($l->t('Memory greater than 1G supports this function')) ?></em>
+	</div>

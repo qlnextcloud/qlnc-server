@@ -302,4 +302,61 @@ $(document).ready(function(){
 			}
 		}
 	});
+	$("#antiviruSwitch").on('click',function() {
+		if (OC.PasswordConfirmation.requiresPasswordConfirmation()) {
+			OC.PasswordConfirmation.requirePasswordConfirmation(function() {
+				switch_state();
+			});
+			return;
+		}
+		switch_state();
+	})
 });
+antiVirtus();
+function antiVirtus() {
+	var obj = {
+		"appIds": ["files_antivirus"]
+	}
+	$.ajax({
+		url: '/index.php/settings/ajax/queryapp.php',
+		data: obj,
+		type:"get",
+		async:true,
+		dataType: "json",
+		success: function(data) {
+			if(data.status == "success") {
+				if(data.data.enable == "yes") {
+					$("#antiviruSwitch").val("已启用").attr("name","haveTurned");
+				}else {
+					$("#antiviruSwitch").val("已禁用").attr("name","remoteRegistry");
+				}
+			}
+		}
+	})
+}
+function switch_state() {
+	var url = "/index.php/settings/ajax/enableapp.php";
+	var obj = {
+		"appIds": ["files_antivirus"]
+	}
+	if($("#antiviruSwitch").attr("name") == "haveTurned") {
+		url = "/index.php/settings/ajax/disableapp.php";
+		obj = {
+			"appid": ["files_antivirus"]
+		}
+	}
+	$.ajax({
+		url: url,
+		data: obj,
+		type:"post",
+		async:true,
+		dataType: "json",
+		success: function(data) {
+			if(data.status == "success") {
+				location.reload();
+			}else {
+				OC.Notification.showTemporary(t('settings', data.data.message));
+			}
+		}
+	})
+}

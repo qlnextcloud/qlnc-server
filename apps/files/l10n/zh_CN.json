@@ -1,5 +1,9 @@
 { "translations": {
     "Storage is temporarily not available" : "库文件 %s 不可用",
+    "antivirus program": "杀毒软件",
+    "have turned" : "已启用",
+    "Remote Registry" : "已禁用",
+    "Memory greater than 1G supports this function" : "内存大于1G设备支持此功能",
     "Storage invalid" : "存储空间无效",
     "Unknown error" : "未知错误",
     "All files" : "全部文件",

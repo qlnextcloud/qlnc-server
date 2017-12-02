@@ -1303,3 +1303,24 @@ doesnotexist:-o-prefocus, .strengthify-wrapper {
 #mail_smtpmode option.php {
 	display: none;
 }
+.switchBox {
+	padding: 30px;
+}
+.switchBox h2 {
+	display: inline-block;
+}
+.switchBox #antiviruSwitch {
+	margin-left: 30px;
+}
+#antivirus .personalblock p{
+	display: none!important;
+}
+#antivirus .personalblock p.infected_action {
+	display: block!important;
+}
+#antivirus .personalblock p.infected_action label {
+	min-width: auto;
+}
+#antivirus-advanced {
+	display: none;
+}
