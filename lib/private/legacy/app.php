@@ -345,6 +345,18 @@ class OC_App {
 	}
 
 	/**
+	 * get whether or not an app is enabled
+	 *
+	 * @param string $app app
+	 * @return bool
+	 *
+	 * This function get whether or not an app is enabled.
+	 */
+	public  function getAppEn($app) {
+		return \OC::$server->getAppConfig()->getValue($app, 'enabled', 'no');
+	}
+
+	/**
 	 * enables an app
 	 *
 	 * @param string $appId
